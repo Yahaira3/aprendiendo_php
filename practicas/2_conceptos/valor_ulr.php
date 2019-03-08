@@ -1,9 +1,10 @@
 <?php 
-$variable = "yahaira";
-echo $variable."<br><br>";
-var_dump($variable);
+$nombre = $_GET["nombre"];
+echo $nombre."<br><br>";
+var_dump($nombre);
 
 $edad = 22;
+echo "tu edad es:". $edad;
 echo "<hr>";
 var_dump($edad);
 echo "<hr>";
