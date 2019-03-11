@@ -20,6 +20,11 @@ height:100vh;
 body a [Title]{
     display:none;
 }
+#login form {
+    padding:30px;
+    border:solid 1px white;
+    border-radius:15px;
+}
 </style>
 
 </head>
