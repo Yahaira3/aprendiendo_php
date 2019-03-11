@@ -17,6 +17,9 @@ align-items: center;
 justify-content: center;
 height:100vh;
 }
+body a [Title]{
+    display:none;
+}
 </style>
 
 </head>
