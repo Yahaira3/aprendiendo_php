@@ -25,7 +25,7 @@ body a [Title]{
     border:solid 1px white;
     border-radius:15px;
      background:white;
-    colr:black;
+    color:black;
 }
 </style>
 

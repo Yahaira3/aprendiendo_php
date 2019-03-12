@@ -66,3 +66,17 @@ echo "<li>ciudad: {$datos [2]}</li>";
 echo "<li>posee carro: {$datos [3]}</li>";
 echo "</lu>";
 
+$datos = [
+0 => "yahaira",
+1 => 22,
+2 => "santiago",
+3 => false
+];
+echo "<pre>";
+var_export($datos);
+echo "</pre>";
+
+
+
+
+
