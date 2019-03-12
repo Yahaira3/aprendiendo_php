@@ -45,4 +45,24 @@ foreach ($meses as $mes)
 
 for ($indice = 0; $indice <= 11;$indice++){
 echo $meses[$indice]."<br>";
+
 }
+//array que almacena datos de una persona 
+
+$datos = ["yahaira",22, "saniago",true];
+echo "<pre>";
+var_dump($datos);
+echo "</pre>";
+
+echo "<pre>";
+var_export($datos);
+echo "</pre>";
+
+echo "<li>Mis datos son:</li>";
+echo "<lu>";
+echo "<li>Nombre: {$datos [0]}</li>";
+echo "<li>edad: {$datos [1]}</li>";
+echo "<li>ciudad: {$datos [2]}</li>";
+echo "<li>posee carro: {$datos [3]}</li>";
+echo "</lu>";
+
