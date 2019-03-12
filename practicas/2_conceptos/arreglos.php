@@ -43,4 +43,6 @@ foreach ($meses as $mes)
     echo $mes ."<br>";
 }
 
-
+for ($indice = 0; $indice <= 11;$indice++){
+echo $meses[$indice]."<br>";
+}
