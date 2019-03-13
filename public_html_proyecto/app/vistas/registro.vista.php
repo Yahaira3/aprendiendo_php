@@ -17,6 +17,9 @@
                     <input class="form-control mb-2 " type="password" name="inputPassword" placeholder="Contraseña"
                         required>
                     <button class="btn btn-primary btn-block" type="submit"> iniciar sesion</button>
+                    <hr>
+                    <div>¿Tienes una cuenta? <a href="login.php">Inicia sesión</a></div>
+
                 </form>
             </div>
             <div class="col-md-4">
@@ -24,9 +27,15 @@
                 <ul>
                     <?php foreach ($usuarios as $usuario):?>
                     <li> <?= $usuario["nombre"] ?> <b>@ <?= $usuario["username"] ?></b></li>
-
-
                     <?php endforeach;?>
+                    <ul>
+                        <?php
+                 foreach ($usuarios as $usuario){
+                     echo "<li>tu{$usuario["nombre"]} y {$usuario["username"]} y {$usuario["correo"]}</li>";
+                 }
+                 ?>
+
+                    </ul>
                 </ul>
             </div>
         </div>
