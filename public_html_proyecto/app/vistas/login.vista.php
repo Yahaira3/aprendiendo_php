@@ -8,8 +8,8 @@
     yahairajimenez</h4>
     <h3>iniciar sesion</h3>
     <hr>
-    <input class="form-control mb-2"  type ="text"name ="inputUser" placeholder="usuario">
-    <input class="form-control mb-2 " type="password" name = "inputPassword"placeholder="Contraseña">
+    <input class="form-control mb-2"  type ="text"name ="inputUser" placeholder="usuario"required  autocapitalize="off">
+    <input class="form-control mb-2 " type="password" name = "inputPassword"placeholder="Contraseña"required>
     <button class="btn btn-primary btn-block" type="submit"> iniciar sesion</button>
     </form>
 </div>
