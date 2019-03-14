@@ -9,7 +9,7 @@
                         yahairajimenez</h4>
                     <h3>Registrarse</h3>
                     <hr>
-                    <input class="form-control mb-2" type="text" name="inputNombre" placeholder="Nombre" required
+                    <input class="form-control mb-2" type="text" name="inputName" placeholder="Nombre" required
                         autofocus>
                     <input class="form-control mb-2" type="text" name="inputEmail" placeholder="Email" required>
                     <input class="form-control mb-2" type="text" name="inputUser" placeholder="Usuario" required
