@@ -24,10 +24,7 @@
             </div>
             <div class="col-md-4">
                 <h5>Usuario Registrado</h5>
-                <ul>
-                    <?php foreach ($usuarios as $usuario):?>
-                    <li> <?= $usuario["nombre"] ?> <b>@ <?= $usuario["username"] ?></b></li>
-                    <?php endforeach;?>
+                
                     <ul>
                         <?php
                  foreach ($usuarios as $usuario){
@@ -36,7 +33,7 @@
                  ?>
 
                     </ul>
-                </ul>
+
             </div>
         </div>
     </div>
