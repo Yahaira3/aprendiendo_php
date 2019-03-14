@@ -59,9 +59,10 @@ try {
         $comando = $conexion->prepare($sqlInsert);
     
         // 2. Ejecutarlo
-        $respueta = $comando->execute($datosUsuarios);
+         $respueta = $comando->execute($datosUsuarios);
         if ($respueta == true) {
-            echo "Datos insertados correctamente";
+            // Redireccionar a la pagina del login
+            header("Location: /learning_php/public_html_proyecto/login.php");
         } else {
             echo "No se insertaron los datos";
         }
