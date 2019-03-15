@@ -1,19 +1,15 @@
 <?php
-$Titulo ="Registro";
+$titulo ="Registro";
+session_start();
+require "app/conexion.php";
 
-$host = "127.0.0.1";
-$dbname = "proyecto_db";
-$user = "root";
-$password = "";
-$opciones = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-
-    //cambiar los  valores para producion 
-  if ($_SERVER['SERVER_NAME'] == "yahairajimenez.000webhostapp.com") {
-    $host = "localhost";
-    $dbname = "id8904328_proyecto_db";
-    $user = "id8904328_yahaira";
-    $password = "29yaraly"; 
+// Si el usuario está logeado no puede ver esta página
+if(isset($_SESSION['usuario_id']) == true) {
+    // REDIRECCIONAR a la pagina principal
+    header("Location: principal.php");
 }
+
+$mensajesError = array();
 
 try {
     // 1. Conectarnos a la base de datos
@@ -62,7 +58,7 @@ try {
          $respueta = $comando->execute($datosUsuarios);
         if ($respueta == true) {
             // Redireccionar a la pagina del login
-            header("Location: /learning_php/public_html_proyecto/login.php");
+            header("Location: /aprendiendo_php/public_html_proyecto/login.php");
         } else {
             echo "No se insertaron los datos";
         }

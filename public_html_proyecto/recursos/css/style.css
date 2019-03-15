@@ -1,3 +1,30 @@
+/* Ocultar el div molesto de 000webhost */
+body a[title] {
+    display: none;
+}
+
+body {
+    transition: background ease .3s;
+}
+
+.text-xtudio {
+    color: #4285F4;
+}
+
+.container.fondo-laptop {
+    background: url('../img/imagen.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+}
+
+#bienvenido {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
 
 #login {
     display: flex;
@@ -6,15 +33,15 @@
     height: 100vh;
 }
 
-body a [Title] {
-    display: none;
+.hola{
+    color: white;
 }
 
-#login form {
-    padding: 30px;
-    border: solid 1px white;
-    border-radius: 15px;
-    background: white;
-    color: black;
+.hola:hover{
+    background:#6C63FF;
+
 }
 
+.nombre{
+    color:#6C63FF;
+}

@@ -1,17 +1,19 @@
-<?php require "_head.php";?>
-<body>
-<div class="container">
-    <section  class= "d-flex vh-100 align-items-center justify-content-center flex-column">
+<?php require '_head.php'; ?>
 
-<h1><?= $saludo; ?></h1>
-<br>
-<div>
-<a  class ="btn btn-primary" href ="login.php">Iniciar Sesion</a>
-<a class ="btn btn-primary" href ="registro.php">Resgistrarse</a>
-</div>
-    </section>
-
-</div>
-    
+<body class="bg-light">
+    <div class="container fondo-laptop">
+        <section id="bienvenido">
+            <h1>Bienvenidos a <span class="d-inline-block text-xtudio nombre"><i class="fab fa-angellist nombre"></i> Yahaira Jimenez</span></h1>
+            <p class="lead">Un lugar donde puedes compartir tus ideas.</p>
+            <div>
+                
+                <a class="btn btn-danger hola" href="login.php">Iniciar sesión</a>
+                <span class="m-1">o</span>
+                <a class="btn btn-danger hola" href="registro.php">Registrarse</a>
+                
+            </div>
+        </section>
+    </div>
 </body>
-</html>
+
+</html> 
