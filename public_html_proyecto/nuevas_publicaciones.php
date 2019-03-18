@@ -28,5 +28,7 @@ if(isset($_POST['btnCrearPublicacion'])) {
     }
 }
 /* Fin del codigo para guardar */
+/* Traer las publicaciones */
+$listadoPublicaciones = selectPublicaciones($conexion);
 $titulo = "Crear publicación";
 require vista("nuevas_publicaciones");
