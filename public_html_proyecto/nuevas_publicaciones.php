@@ -29,4 +29,4 @@ if(isset($_POST['btnCrearPublicacion'])) {
 }
 /* Fin del codigo para guardar */
 $titulo = "Crear publicación";
-require vista("nueva_publicacion");
+require vista("nuevas_publicaciones");

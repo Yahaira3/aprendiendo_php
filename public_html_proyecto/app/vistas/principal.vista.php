@@ -15,7 +15,7 @@
 </div>
 
 <div>
-    <a class="btn btn-primary" href="nueva_publicacion.php">Crear publicacion</a>
+    <a class="btn btn-primary" href="nuevas_publicaciones.php">Crear publicacion</a>
 </div>
 
 </body>

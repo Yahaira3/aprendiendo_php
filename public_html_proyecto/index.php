@@ -10,3 +10,5 @@ if(isset($_SESSION['usuario_id']) == true) {
     header("Location: principal.php");
 }
 $mensajesError = array();
+
+require vistas("index");

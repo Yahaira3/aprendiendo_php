@@ -39,4 +39,4 @@ if (isset($_POST['inputUser'])) {
 
 }
 $titulo = "yahairajimenez - Iniciar sesión";
-require "app/vistas/login.vista.php"; 
+require vistas("login");

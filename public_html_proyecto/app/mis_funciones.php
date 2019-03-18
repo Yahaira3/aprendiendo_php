@@ -1,11 +1,11 @@
 <?php
-function imprimir ($valor_recibido)
+function imprimir($valor_recibido)
 {
     echo "<pre>";
     var_export($valor_recibido);
-    "</pre>";
+    echo "</pre>";
 }
-function vistas ()
+function vista($nombre)
 {
-    
+return "app/vistas/$nombre.vista.php";
 }

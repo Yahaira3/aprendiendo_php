@@ -66,4 +66,4 @@ try {
     }
 }
 
-require "app/vistas/registro.vista.php";
+require vistas("registro");
