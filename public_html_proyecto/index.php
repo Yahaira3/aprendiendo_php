@@ -9,6 +9,7 @@ if(isset($_SESSION['usuario_id']) == true) {
     // REDIRECCIONAR a la pagina principal
     header("Location: principal.php");
 }
+
 $mensajesError = array();
 
 require vistas("index");

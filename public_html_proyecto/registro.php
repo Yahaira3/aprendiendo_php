@@ -15,34 +15,46 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-if (isset($_POST['inputName'])){
-    $datosUsuarios = array(
-        'nombre' => $_POST['inputName'],
-        'correo' => $_POST['inputEmail'],
-        'username' => $_POST['inputUser'],
-        'password' => password_hash($_POST['inputPassword'], PASSWORD_DEFAULT)
-    );
-
-    
-    // Validar 
-    if (false) {
-    
-    } else {
-        // Enviar los datos
-        // 1. Preparar el SQL (query)
-        $sqlInsert = "INSERT INTO usuarios(nombre, correo, username, password)
-                VALUES (:nombre, :correo, :username, :password)";
-        $comando = $conexion->prepare($sqlInsert);
-    
-        // 2. Ejecutarlo
-        $respueta = $comando->execute($datosUsuarios);
-        if ($respueta == true) {
-            // Redireccionar a la pagina del login
-            //header("Location: login.php");
+$mensaje = "";
+try {
+    if (isset($_POST['inputName'])){
+        $datosUsuarios = array(
+            'nombre' => $_POST['inputName'],
+            'correo' => $_POST['inputEmail'],
+            'username' => $_POST['inputUser'],
+            'password' => password_hash($_POST['inputPassword'], PASSWORD_DEFAULT)
+        );
+        // Validar que el usuario/correo no existan en la base de datos
+        $usuariosRegistrados = comprobarUsuarioExiste($conexion, $datosUsuarios['correo'], $datosUsuarios['username']);
+        $cantidadUsuariosRegistrados = count($usuariosRegistrados);
+        imprimir($cantidadUsuariosRegistrados);
+            if ($cantidadUsuariosRegistrados >= 1) {
+                // Hay usuarios registrados con ese correo o username
+                throw new Exception("Usuario o correo existentes.");
+            } 
+        // Validar 
+        if (false) {
+        
         } else {
-            echo "No se insertaron los datos";
+            // Enviar los datos
+            // 1. Preparar el SQL (query)
+            $sqlInsert = "INSERT INTO usuarios(nombre, correo, username, password)
+                    VALUES (:nombre, :correo, :username, :password)";
+            $comando = $conexion->prepare($sqlInsert);
+        
+            // 2. Ejecutarlo
+            $respueta = $comando->execute($datosUsuarios);
+            if ($respueta == true) {
+                // Redireccionar a la pagina del login
+                header("Location: login.php");
+            } else {
+                echo "No se insertaron los datos";
+            }
         }
     }
+    
+}catch(Exception $exception) {
+    $mensaje = $exception->getMessage();
 }
-$titulo = "yahaira jimenez - Registrarse";
+$titulo = "XtudioPlay - Registrarse";
 require vista("registro");
