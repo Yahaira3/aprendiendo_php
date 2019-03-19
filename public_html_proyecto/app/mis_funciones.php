@@ -1,4 +1,14 @@
 <?php
+function miserrores($errornumero,$errormensaje,$errorarchivo,$errorlinea){
+ echo "<div class=alert alert-danger>ha ocurido un error</div> ";
+ echo "tipo de error : $errornumero <br>";
+ echo "mensaje : $errormensaje <br>";
+ echo "en el archivo: $errorarchivo <br>";
+ echo "En la linea: $errorlinea <br>";
+}
+
+set_error_handler("miserrores");
+
 function imprimir($valor_recibido) {
     echo "<pre>";
     var_export($valor_recibido);

@@ -5,8 +5,8 @@
         <div id="login" class="row">
             <div class="col-md-4">
                 <form action="" method="post">
-                    <h4><i class="fab fa-angellist"></i>
-                        yahairajimenez</h4>
+                    <h1><i class="fab fa-angellist"></i>
+                       Divas</h1>
                     <h3>Registrarse</h3>
                     <hr>
                     <input class="form-control mb-2" type="text" name="inputName" placeholder="Nombre" required
@@ -16,7 +16,7 @@
                         autocapitalize="off">
                     <input class="form-control mb-2 " type="password" name="inputPassword" placeholder="Contraseña"
                         required>
-                    <button class="btn btn-primary btn-block" type="submit"> iniciar sesion</button>
+                    <button class="btn btn-primary btn-block" type="submit"> Registrar </button>
                     <hr>
                     <div>¿Tienes una cuenta? <a href="login.php">Inicia sesión</a></div>
 
