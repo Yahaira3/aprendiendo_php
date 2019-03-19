@@ -3,7 +3,7 @@
 <body class="bg-light">
     <div class="container fondo-laptop">
         <section id="bienvenido">
-            <h1>Bienvenidos a <span class="d-inline-block text-xtudio nombre"><i class="fab fa-angellist nombre"></i> Yahaira Jimenez</span></h1>
+            <h1>Bienvenidos a <span class="d-inline-block text-xtudio nombre"><i class="fab fa-angellist nombre"></i> Divas</span></h1>
             <p class="lead">Un lugar donde puedes compartir tus ideas.</p>
             <div>
                 

@@ -9,7 +9,7 @@
 
                 <!-- form -->
                 <form action="" method="post">
-                    <h4><a href="/" class="text-xtudio text-decoration-none"><i class="fab fa-angellist nombre"></i> Divas</a></h4>
+                    <h1><a href="/" class="text-xtudio text-decoration-none"><i class="fab fa-angellist nombre"></i> Divas</a></h1>
                     <hr>
                     <h4 class="mb-4">Iniciar sesión</h4>
 
