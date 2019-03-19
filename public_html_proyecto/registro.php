@@ -13,7 +13,7 @@ try {
     // 4. Traer los datos
     $usuarios = $comando->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    echo $e->getMessage();
+   echo $e->getMessage();
 }
 $mensaje = "";
 try {
@@ -27,7 +27,7 @@ try {
         // Validar que el usuario/correo no existan en la base de datos
         $usuariosRegistrados = comprobarUsuarioExiste($conexion, $datosUsuarios['correo'], $datosUsuarios['username']);
         $cantidadUsuariosRegistrados = count($usuariosRegistrados);
-        imprimir($cantidadUsuariosRegistrados);
+        
             if ($cantidadUsuariosRegistrados >= 1) {
                 // Hay usuarios registrados con ese correo o username
                 throw new Exception("Usuario o correo existentes.");
@@ -47,8 +47,9 @@ try {
             if ($respueta == true) {
                 // Redireccionar a la pagina del login
                 header("Location: login.php");
+                die;
             } else {
-                echo "No se insertaron los datos";
+               echo "No se insertaron los datos";
             }
         }
     }
