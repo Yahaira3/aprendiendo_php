@@ -4,7 +4,7 @@
     <div class="container fondo-laptop">
         <section id="bienvenido">
             <h1>Bienvenidos a <span class="d-inline-block text-xtudio nombre"><i class="fab fa-angellist nombre"></i> Divas</span></h1>
-            <p class="lead">Un lugar donde puedes compartir tus ideas.</p>
+            <p class="lead">Donde tu vida sera mas divertida.</p>
             <div>
                 
                 <a class="btn btn-danger hola" href="login.php">Iniciar sesión</a>

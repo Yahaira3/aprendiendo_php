@@ -1,11 +1,11 @@
 servidor: files.000webhost.com
 nombre de mi pagina:https://yahairajimenez.000webhostapp.com/
 nombre de usuario: yahairajimenez
-contraseña: aprendiendo_php
+contraseï¿½a: aprendiendo_php
 
 puerto: 21
 
 base de datos
 nombr: id8904328_proyecto_db
 usuario: id8904328_yahaira
-contraseña :29yaraly
+contraseï¿½a: 29yaraly
