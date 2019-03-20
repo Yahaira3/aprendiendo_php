@@ -49,3 +49,13 @@ function comprobarUsuarioExiste($conexion, $correo, $username) {
     $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
     return $resultado;
 }
+
+function selectcategorias($conexion) {
+    // 1. Preparar el query
+    $comando = $conexion->prepare("SELECT * FROM categorias");
+    // 2. Ejecutar el query
+    $comando->execute();
+    // 3. Traer los datos
+    $categorias = $comando->fetchAll(PDO::FETCH_ASSOC);
+    return $categorias;
+}
