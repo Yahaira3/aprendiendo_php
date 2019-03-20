@@ -57,5 +57,5 @@ try {
 }catch(Exception $exception) {
     $mensaje = $exception->getMessage();
 }
-$titulo = "XtudioPlay - Registrarse";
+$titulo = "Divas - Registrarse";
 require vista("registro");

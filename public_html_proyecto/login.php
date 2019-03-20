@@ -44,5 +44,5 @@ if (isset($_POST['inputUser'])) {
         $mensajesError['usuario_incorrecto'] = "El usuario o la contraseña son incorrectos";
     }
 }
-$titulo = "yahaira jimenez - Iniciar sesión";
+$titulo = "Divas - Iniciar sesión";
 require vista("login");
