@@ -8,6 +8,6 @@ if (isset($_SESSION['usuario_id']) == false) {
     header("Location: login.php");
 }
 // Traer las publicaciones
-$publicaciones = selectPublicaciones($conexion);
+$listadopublicaciones = selectPublicacionesDelUsuario($conexion,$_SESSION["usuario_id"]);
 $titulo = "yahaira jimenez- Página principal";
 require vista("principal");

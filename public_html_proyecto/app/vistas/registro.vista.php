@@ -18,8 +18,14 @@
                         required>
                     <button class="btn btn-primary btn-block" type="submit"> Registrar </button>
                     <hr>
-                    <div>¿Tienes una cuenta? <a href="login.php">Inicia sesión</a></div>
 
+                    <?php
+                    if(isset($mensaje)){
+                        echo $mensaje;
+                    }
+                    
+                    ?>
+                    <div>¿Tienes una cuenta? <a href="login.php">Inicia sesión</a></div>
                 </form>
             </div>
             <div class="col-md-4">

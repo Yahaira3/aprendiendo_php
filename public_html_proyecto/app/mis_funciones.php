@@ -30,6 +30,16 @@ function selectPublicaciones($conexion) {
     return $publicaciones;
 }
 
+function selectPublicacionesDelUsuario($conexion, $usuario_id) {
+    // 1. Preparar el query
+    $comando = $conexion->prepare("SELECT * FROM publicaciones where creado_por = $usuario_id");
+    // 2. Ejecutar el query
+    $comando->execute();
+    // 3. Traer los datos
+    $publicaciones = $comando->fetchAll(PDO::FETCH_ASSOC);
+    return $publicaciones;
+}
+
 function comprobarUsuarioExiste($conexion, $correo, $username) {
     // 1. Preparar el query
     $comando = $conexion->prepare("SELECT * FROM usuarios WHERE correo = '$correo' OR username = '$username'");

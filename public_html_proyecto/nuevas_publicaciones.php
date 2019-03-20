@@ -30,6 +30,6 @@ if(isset($_POST['btnCrearPublicacion'])) {
 }
 /* Fin del codigo para guardar */
 /* Traer las publicaciones */
-$listadoPublicaciones = selectPublicaciones($conexion);
+$listadoPublicaciones = selectPublicacionesDelUsuario($conexion,$_SESSION["usuario_id"]);
 $titulo = "Crear publicación";
 require vista("nuevas_publicaciones");
