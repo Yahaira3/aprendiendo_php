@@ -10,11 +10,12 @@ if(isset($_POST['btnCrearPublicacion'])) {
         'titulo' => $_POST['inputTitulo'],
         'descripcion' => $_POST['inputDescripcion'],
         'id_categoria' => $_POST['selectCategoria'],
-        'nombre_archivo' => $_POST['inputArchivo']
+        'nombre_archivo' => $_POST['inputArchivo'],
+        'creado_por' => $_SESSION['usuario_id']
     );
     // 1. Preparar el query
-    $sql = "INSERT INTO publicaciones(titulo, descripcion, id_categoria, nombre_archivo) 
-            VALUES (:titulo, :descripcion, :id_categoria, :nombre_archivo)";
+    $sql = "INSERT INTO publicaciones(titulo, descripcion, id_categoria, nombre_archivo, creado_por) 
+            VALUES (:titulo, :descripcion, :id_categoria, :nombre_archivo, :creado_por)";
     $comando = $conexion->prepare($sql);
     // 2. Ejecutar el query, con los datos de la publicacion
     $comando->execute($publicacion);
