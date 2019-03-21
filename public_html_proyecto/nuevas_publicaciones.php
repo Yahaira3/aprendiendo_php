@@ -27,7 +27,28 @@ if(isset($_POST['btnCrearPublicacion'])) {
     } else {
         echo "Los datos no fueron insertados :(";
     }
+    // subir el archivo
+        if (isset($_FILES['inputArchivo'])) {
+        $destino = "C:\\xampp\\htdocs\\learning_php\\public_html_proyecto\\recursos\\archivos";
+        $nombreArchivo = $_FILES['inputArchivo']['name'];
+        $nombreArchivoTemp = $_FILES['inputArchivo']['tmp_name'];
+
+        // Concatenarle el nombre real del archivo a la variable destino
+        $destino .= DIRECTORY_SEPARATOR . $nombreArchivo;
+                                                      
+        $subido = move_uploaded_file($nombreArchivoTemp, $destino);
+
+        if ($subido == true) {
+            echo "El archivo se subiÃ³ correctamente";
+        } else {
+            echo "El archivo no se subiÃ³ correctamente";
+        }
+    }
 }
+
+
+
+
 /* Fin del codigo para guardar */
 /* Traer las publicaciones */
 $listadoPublicaciones = selectPublicacionesDelUsuario($conexion,$_SESSION["usuario_id"]);
