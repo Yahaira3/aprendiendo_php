@@ -1,8 +1,22 @@
-<?php 
+<?php
 echo "<pre>";
-var_dump($_FILES);
+var_export($_FILES);
 echo "</pre>";
-
+if (isset($_POST['btnSubir'])) {
+    
+    
+    $destino = "archivos";
+    $nombreArchivo = $_FILES['inputArchivo']['name'];
+    $nombreArchivoTemp = $_FILES['inputArchivo']['tmp_name'];
+    $destino .= DIRECTORY_SEPARATOR . "$nombreArchivo";
+    $subido = move_uploaded_file($nombreArchivoTemp, $destino);
+    if ($subido == true) {
+        echo "El archivo se subió";
+    } else {
+        echo "El archivo no se subió";
+    }
+    
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +28,9 @@ echo "</pre>";
     <title>Document</title>
 </head>
 <body>
-    <form action=""method="post" enctype="multipart/form-data">
-    <input name="inputarchivo" type="file">
-    <button name="btnsubir">subir</button>
-    
-    
+    <form action="" method="post" enctype="multipart/form-data">
+        <input name="inputArchivo" type="file">
+        <button name="btnSubir">Subir</button>
     </form>
 </body>
 </html>
