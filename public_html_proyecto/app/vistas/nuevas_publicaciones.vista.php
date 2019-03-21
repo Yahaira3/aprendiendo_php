@@ -8,12 +8,16 @@
         <input class="form-control" type="text" name="inputTitulo" placeholder="Titulo" required>
         <input class="form-control" type="text" name="inputDescripcion" placeholder="Descripcion" required>
         <select class="form-control" name="selectCategoria" required>
-        
-            <?php 
-            foreach ($categorias as $categoria) {
-            echo "<option value='{$categoria['id']}'>{$categoria['nombre']}</option>";
-              }
-            ?>
+            
+
+      <?php
+      foreach ($categorias as $categoria){
+        echo <option value= '{$categoria ['id']} '>{$categoria['nombre']}</option>;
+      }
+      
+      [] {} 
+
+      ?>
 
         </select>
         <input class="form-control" type="file" name="inputArchivo">

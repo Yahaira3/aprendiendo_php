@@ -42,7 +42,7 @@ foreach ($categorias as $categoria){
 
 }
 
-$categorias=seleccategorias($conexion);
+$categorias=selectcategorias($conexion);
 
 
 require vista("nuevas_publicaciones");
