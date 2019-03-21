@@ -42,10 +42,7 @@ foreach ($categorias as $categoria){
 
 }
 
-echo "<select>";
-foreach ($categorias as $categoria) {
-echo "<option value='{$categoria['id']}'>{$categoria['nombre']}</option>";
-}
- echo "</select>";
+$categorias=seleccategorias($conexion);
+
 
 require vista("nuevas_publicaciones");
