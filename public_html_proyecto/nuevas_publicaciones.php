@@ -29,7 +29,7 @@ if(isset($_POST['btnCrearPublicacion'])) {
     }
     // subir el archivo
         if (isset($_FILES['inputArchivo'])) {
-        $destino = "C:\\xampp\\htdocs\\learning_php\\public_html_proyecto\\recursos\\archivos";
+        $destino = "C:\\xampp\\htdocs\\aprendiendo_php\\public_html_proyecto\\recursos\\archivos";
         $nombreArchivo = $_FILES['inputArchivo']['name'];
         $nombreArchivoTemp = $_FILES['inputArchivo']['tmp_name'];
 
@@ -45,9 +45,6 @@ if(isset($_POST['btnCrearPublicacion'])) {
         }
     }
 }
-
-
-
 
 /* Fin del codigo para guardar */
 /* Traer las publicaciones */
