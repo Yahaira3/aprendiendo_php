@@ -21,7 +21,6 @@ if(isset($_POST['btnCrearPublicacion'])) {
     $comando->execute($publicacion);
     // 3. Traer los datos
     $resultado = $comando->rowCount();
-    imprimir($resultado);
     if ($resultado > 0) {
         echo "Datos insertados :D";
     } else {
@@ -30,6 +29,7 @@ if(isset($_POST['btnCrearPublicacion'])) {
     // subir el archivo
         if (isset($_FILES['inputArchivo'])) {
         $destino = "C:\\xampp\\htdocs\\aprendiendo_php\\public_html_proyecto\\recursos\\archivos";
+        $destino = $_SERVER['DOCUMENT_ROOT'] . "/recursos/archivos";
         $nombreArchivo = $_FILES['inputArchivo']['name'];
         $nombreArchivoTemp = $_FILES['inputArchivo']['tmp_name'];
 
