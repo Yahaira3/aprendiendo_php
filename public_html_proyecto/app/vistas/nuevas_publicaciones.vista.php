@@ -2,7 +2,7 @@
 
 <body>
 <div class="row">
-    <form action="" method="post" class="col-md-3">
+    <form action="" method="post" class="col-md-3" encttype="multipart/form-data">
         <h3>Crear publicacion</h3>
         <hr>
         <input class="form-control" type="text" name="inputTitulo" placeholder="Titulo" required>
