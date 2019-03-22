@@ -63,9 +63,10 @@
             <?php
             // Mostrar las publicaciones (si las hay)
             if (count($listadopublicaciones) > 0) {
-                foreach ($listadopublicaciones as $publicacion) {
+                foreach ($listadopublicaciones as $publicacion) { 
                     echo "<div class='col-md-4 mb-3'>
                             <div class='card'>
+                            <img class='card-img' src='recursos/archivos/camaron.jpg' alt='hey'>
                                 <div class='card-body'>
                                 <h5 class='card-title'>#{$publicacion['id']} {$publicacion['titulo']}</h5>
                                 <h6 class='card-subtitle mb-2 text-muted'>{$publicacion['id_categoria']}</h6>

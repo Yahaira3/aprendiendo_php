@@ -44,6 +44,7 @@
             </tr>";
     }
   ?>
+  <img src="recursos/archivos/camaron.jpg" alt="camarones" height="300" width="400">
 </body>
 
 </html>
