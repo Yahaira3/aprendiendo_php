@@ -7,7 +7,7 @@
         <hr>
         <input class="form-control" type="text" name="inputnombre" placeholder="Nombre" required><br>
         <button class="btn btn-primary" name="btnCrearcategorias">crear categorias</button>
-        <button class="btn btn-primary" name="btnCrearcategorias">guardar</button>
+
     </form>
     </div>
    

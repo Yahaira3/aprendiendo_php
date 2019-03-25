@@ -4,7 +4,7 @@ require "app/mis_funciones.php";
 require "app/conexion.php";
 /* Codigo para guardar la publicacion */
 //  Verificar que el usuario haya hecho click en el boton
-if(isset($_POST['btncategoria'])) {
+if(isset($_POST['btncategorias'])) {
     // Guardar los datos en un array para insertarlos a la base de datos
     $categorias = array(
         'nombre' => $_POST['inputcategorias'],
@@ -27,7 +27,7 @@ if(isset($_POST['btncategoria'])) {
     }
 
     $titulo="crear categorias";
-
+}
 $categorias=selectcategorias($conexion);
 
 
