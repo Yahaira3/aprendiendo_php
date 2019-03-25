@@ -7,7 +7,7 @@ require "app/conexion.php";
 if(isset($_POST['btnCrearcategorias'])) {
     // Guardar los datos en un array para insertarlos a la base de datos
     $categorias = array(
-        'nombre' => $_POST['inputcategorias'],
+        'nombre' => $_POST['inputnombre'],
     );
     // 1. Preparar el query
     $sql = "INSERT INTO categorias(nombre) 
