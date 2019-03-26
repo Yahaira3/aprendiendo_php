@@ -32,7 +32,7 @@
       <th scope="col">Categoria</th>
     </tr>
   </thead>
-  <tbody>
+  <body>
   <?php
     // Recorrer todas las publicaciones
     foreach($listadoPublicaciones as $publicacion) {

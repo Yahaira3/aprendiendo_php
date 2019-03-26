@@ -10,7 +10,29 @@
 
     </form>
     </div>
-   
-</body>
+    <br>
+     <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">nombre</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  <?php
+  // recorrer categorias 
+  foreach($categorias as $categoria){
+      echo "<tr>
+      <th>{$categoria['id']}</th>
+      <td>{$categoria['nombre']}</td>
+      <td><a href=''>Editar</a></td>
+      <td><a href=''>Eliminar</a></td>
+
+      </tr>";
+     
+  }
+    ?>
+</tbody>
 
 </html>

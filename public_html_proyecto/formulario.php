@@ -25,6 +25,7 @@ if(isset($_POST['btnCrearcategorias'])) {
     } else {
         echo "Los datos no fueron insertados :(";
     }
+   
 
     $titulo="crear categorias";
 }
