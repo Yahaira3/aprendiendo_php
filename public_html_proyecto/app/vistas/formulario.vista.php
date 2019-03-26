@@ -13,7 +13,8 @@
     <form action="" method="post" class="col-md-3" enctype="multipart/form-data">
         <h3>Crear categorias</h3>
         <hr>
-        <input class="form-control" type="text" name="inputnombre" placeholder="Nombre" required><br>
+         <input type="hidden" name="id_categoria" value="<?php echo $_GET['id'] ?? "" ?>">
+        <input class="form-control" type="text" name="inputnombre" value="<?php echo $_GET['nombre'] ?? "" ?>" placeholder="Nombre" required><br>
         <button class="btn btn-primary" name="btnCrearcategorias">crear categorias</button>
     </form>
     </div>
@@ -33,8 +34,9 @@
       echo "<tr>
       <th>{$categoria['id']}</th>
       <td>{$categoria['nombre']}</td>
-      <td><a href=''>Editar</a></td>
+      
       <td><a href='formulario.php?accion=eliminar&id={$categoria['id']}'>Eliminar</a></td>
+      <td><a href='formulario.php?accion=editar&id={$categoria['id']}&nombre={$categoria['nombre']}'>Editar</a></td>
 
       </tr>";
     $titulo = "crear categorias"; 

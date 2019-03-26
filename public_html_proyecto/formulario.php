@@ -3,12 +3,21 @@ session_start();
 require "app/mis_funciones.php";
 require "app/conexion.php";
 /* Codigo para guardar la publicacion */
+
 //  Verificar que el usuario haya hecho click en el boton
 if(isset($_POST['btnCrearcategorias'])) {
    
      if ($_GET['accion'] == 'actualizar' && isset($_GET['id'])) {
         // Logica de actualizar
-        $sql = '';
+        $idcategoria = $_POST['id_categoria'];
+        $nombre = $_POST['inputcategoria'];
+        //1. preparar el query.
+        $sql = "UPDATE  categorias set nombre = '$nombre' where id=$idcategoria";
+        $comando = $conexion->prepare($sql);
+        //2.ejecutar el query.
+        $comando ->execute();
+        //3.traer los datos.
+        $resultado = $comando->rowcount();
     } else {
             // Guardar los datos en un array para insertarlos a la base de datos
         $categorias = array(
@@ -46,11 +55,11 @@ if ( isset($_GET['accion']) && isset($_GET['id']) ) {
         echo "Logica para eliminar";
         //1.preparar el query.
          $sql = "UPDATE categorias SET eliminado = true WHERE id = $idCategoria ";
-        $comando = $conxion->prepare($sql);
+        $comando = $conexion->prepare($sql);
         //2. ejecutar el query.
         $comando->execute ();
         //3. traer lo datos.
-        $resultado = $comnado->rowcount();
+        $resultado = $comando->rowcount();
 
         // Borrado fisico
         //$sql = "DELETE FROM categorias WHERE id = $idCategoria ";
