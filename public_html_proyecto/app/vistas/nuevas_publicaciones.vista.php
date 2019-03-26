@@ -1,5 +1,11 @@
 <?php require "_head.php"; ?>
-
+<div class="jumbotron">
+        <div class="container">
+            <h2 class="font-weight-normal">Bienvenid@ <?php echo $_SESSION['usuario_nombre']; ?> a tu página principal.</h2>
+            <p class="lead">Empieza a disfrutar de tu espacio.</p>
+            <a href='nuevas_publicaciones.php' class='btn btn-primary'><i class='fas fa-plus mr-1'></i> Crear publicación</a><br><br>
+            <a href='formulario.php' class='btn btn-primary'><i class='fas fa-plus mr-1'></i> Crear categoria</a>
+        </div>
 <body>
 <div class="row">
     <form action="" method="post" class="col-md-3" enctype="multipart/form-data">
