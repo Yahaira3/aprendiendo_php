@@ -1,4 +1,5 @@
 <?php require "_head.php"; ?>
+
 <div class="jumbotron">
         <div class="container">
             <h2 class="font-weight-normal">Bienvenid@ <?php echo $_SESSION['usuario_nombre']; ?> a tu página principal.</h2>
@@ -33,10 +34,10 @@
       <th>{$categoria['id']}</th>
       <td>{$categoria['nombre']}</td>
       <td><a href=''>Editar</a></td>
-      <td><a href=''>Eliminar</a></td>
+      <td><a href='formulario.php?accion=eliminar&id={$categoria['id']}'>Eliminar</a></td>
 
       </tr>";
-     
+    $titulo = "crear categorias"; 
   }
     ?>
 </tbody>

@@ -52,7 +52,7 @@ function comprobarUsuarioExiste($conexion, $correo, $username) {
 
 function selectcategorias($conexion) {
     // 1. Preparar el query
-    $comando = $conexion->prepare("SELECT * FROM categorias");
+    $comando = $conexion->prepare("SELECT * FROM categorias where eliminado = false");
     // 2. Ejecutar el query
     $comando->execute();
     // 3. Traer los datos
