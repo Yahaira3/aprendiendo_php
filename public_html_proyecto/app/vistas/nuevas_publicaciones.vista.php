@@ -6,6 +6,8 @@
             <a href='nuevas_publicaciones.php' class='btn btn-primary'><i class='fas fa-plus mr-1'></i> Crear publicación</a><br><br>
             <a href='formulario.php' class='btn btn-primary'><i class='fas fa-plus mr-1'></i> Crear categoria</a>
         </div>
+        <br>
+
 <body>
 <div class="row">
     <form action="" method="post" class="col-md-3" enctype="multipart/form-data">
